@@ -1,0 +1,96 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="main.css">
+  <meta charset="utf-8">
+  <title>Kalkulacka</title>
+</head>
+
+<body>
+  <div id="main" class="">
+    <form name="f" class="" action="index.html" method="post">
+      <input type="text" name="ddd" placeholder="0" value="" id="output-field"> <br>
+      <input type="button" name="" value="1" onclick="f.ddd.value += 1">
+      <input type="button" name="" value="2" onclick="f.ddd.value += 2">
+      <input type="button" name="" value="3" onclick="f.ddd.value += 3">
+      <input type="button" name="" value="+" onclick="add()">
+      <br>
+      <input type="button" name="" value="4" onclick="f.ddd.value += 4">
+      <input type="button" name="" value="5" onclick="f.ddd.value += 5">
+      <input type="button" name="" value="6" onclick="f.ddd.value += 6">
+      <input type="button" name="" value="-" onclick="sub()">
+      <br>
+      <input type="button" name="" value="7" onclick="f.ddd.value += 7">
+      <input type="button" name="" value="8" onclick="f.ddd.value += 8">
+      <input type="button" name="" value="9" onclick="f.ddd.value += 9">
+      <input type="button" name="" value="/" onclick="div()">
+      <br>
+      <input type="button" name="" value="c" onclick="f.ddd.value = ''">
+      <input type="button" name="" value="0" onclick="f.ddd.value += 0">
+      <input type="button" name="" value="=" onclick="f.ddd.value = eval(f.ddd.value)">
+      <input type="button" name="" value="x" onclick="mull()">
+      <br>
+
+    </form>
+    </div>
+    <script type="text/javascript">
+      function add() {
+        var act = 0,
+          b = 0;
+        act = f.ddd.value;
+        b = act.charAt(act.length - 1);
+        if (b == '+' || b == '-' || b == '/' || b == '*') {
+          f.ddd.value = act.substring(0, act.length - 1);
+          f.ddd.value += '+';
+        } else {
+          f.ddd.value += '+';
+        }
+
+      }
+
+      function sub() {
+        var act = 0,
+          b = 0;
+        act = f.ddd.value;
+        b = act.charAt(act.length - 1);
+        if (b == '+' || b == '-' || b == '/' || b == '*') {
+          f.ddd.value = act.substring(0, act.length - 1);
+          f.ddd.value += '-';
+        } else {
+          f.ddd.value += '-';
+        }
+
+      }
+
+      function div() {
+        var act = 0,
+          b = 0;
+        act = f.ddd.value;
+        b = act.charAt(act.length - 1);
+        if (b == '+' || b == '-' || b == '/' || b == '*') {
+          f.ddd.value = act.substring(0, act.length - 1);
+          f.ddd.value += '/';
+        } else {
+          f.ddd.value += '/';
+        }
+
+      }
+
+      function mull() {
+        var act = 0,
+          b = 0;
+        act = f.ddd.value;
+        b = act.charAt(act.length - 1);
+        if (b == '+' || b == '-' || b == '/' || b == '*') {
+          f.ddd.value = act.substring(0, act.length - 1);
+          f.ddd.value += '*';
+        } else {
+          f.ddd.value += '*';
+        }
+      }
+    </script>
+
+
+</body>
+
+</html>
